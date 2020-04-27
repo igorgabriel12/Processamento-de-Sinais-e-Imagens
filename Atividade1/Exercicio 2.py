@@ -1,9 +1,8 @@
-# Exercício 02
+# Exercicio 02
 # Aluno: Igor Gabriel Pereira     
 #Cod.: 825.399
-
-# Buscar imagem no Github
-!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade01/Exercicio02/moedas_105.jpg" -O "moedas.jpg"
+ 
+!wget "https://github.com/igorgabriel12/Processamento-de-Sinais-e-Imagens/blob/master/Atividade1/moedas.jpg?raw=true" -O "moedas.jpg"
 
 import math 
 import cv2 as cv
@@ -31,19 +30,20 @@ for c in contours:
   x, y, w, h = cv.boundingRect(c)
   cv.rectangle(img4, (x,y), (x+w, y+h), (255, 0, 0), 2) 
   area = cv.minAreaRect(c)
+  
   box = cv.boxPoints(area) 
   box = np.int0(box) 
-  (x, y), radius = cv.minEnclosingCircle(c) 
-  radius = int(radius)
+
+  (x, y), radius = cv.minEnclosingCircle(c)  
   all_radius.append(radius)
   
-five_cents_coin = round(math.pi * (all_radius[4] * all_radius[4]), 2)
-one_real_coin = round(math.pi * (all_radius[5] * all_radius[5]), 2)
+one_real_coin = round(math.pi * (all_radius[4] * all_radius[4]), 2)
+five_cents_coin = round(math.pi * (all_radius[5] * all_radius[5]), 2)
 
 
 print("_________________________________________________") 
-print("\nMoeda de 1 real, área:", {one_real_coin}) 
-print("Moeda de 5 centavos, área:", {five_cents_coin})
+print("\nMoeda de 1 real, Ã¡rea:", {one_real_coin}) 
+print("Moeda de 5 centavos, Ã¡rea:", {five_cents_coin})
 print("_________________________________________________")
 
 # img4 = cv.cvtColor(img4,cv.COLOR_GRAY2RGB)

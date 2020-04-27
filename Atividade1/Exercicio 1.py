@@ -1,14 +1,13 @@
 # Exercicio 01
 # Aluno: Igor Gabriel Pereira     
 #Cod.: 825.399
-
-# Buscar imagem no Github
-!wget "https://github.com/igorgabriel12/Processamento-de-Sinais-e-Imagens/blob/master/Atividade%20avaliativa%201/moedas.jpg"
+ 
+!wget "https://github.com/igorgabriel12/Processamento-de-Sinais-e-Imagens/blob/master/Atividade1/objects.png?raw=true" -O "objects.png"
 
 import cv2 as cv 
 import matplotlib.pyplot as plt
 
-img1 = cv.imread("objects.png");
+img1 = cv.imread('objects.png');
 img1 = cv.cvtColor(img1,cv.COLOR_BGR2RGB)
 
 img2 = cv.cvtColor(img1,cv.COLOR_RGB2GRAY)
