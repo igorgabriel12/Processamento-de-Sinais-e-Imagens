@@ -2,7 +2,7 @@
 #Aluno: Igor Gabriel Pereira
 #Cod.: 825.399
 
-# !wget "https://consumerguide.com/wp-content/uploads/2014/01/12805_2018_rio_5-door_ex.jpg" -O "car.jpg"
+!wget "https://github.com/igorgabriel12/Processamento-de-Sinais-e-Imagens/blob/master/Atividade3/carro.jpg?raw=true" -O "car.jpg"
 
 import cv2 as cv
 import numpy as np
