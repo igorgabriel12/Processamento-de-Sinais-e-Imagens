@@ -2,7 +2,7 @@
 # cod.: 825.399
 # Exercicio 1
 
-!wget "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSQOhVBaSB-j1hfgpPpJ4XecnadAzYPOrif9IwU7S4LKk_fJNb7&usqp=CAU"  -O "celulas.png"
+!wget "https://github.com/igorgabriel12/Processamento-de-Sinais-e-Imagens/blob/master/Atividade4/celulas.jpg?raw=true"  -O "celulas.png"
 
 import cv2 as cv
 import numpy as np
